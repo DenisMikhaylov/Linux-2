@@ -67,6 +67,28 @@ shared-network LAN1 {
 # dhcpd-pools -l /var/lib/dhcp/dhcpd.leases -c /etc/dhcp/dhcpd.conf
 
 ```
+Настройка логирования
+
+Установка ПО rsyslog
+
+```
+apt install rsyslog -y
+```
+Настройка rsyslog
+```
+nano /etc/rsyslog.conf
+```
+Доавить в Rules строку
+
+```
+Local7.*        /var/log/dhcpd.log
+```
+
+Перезапуск rsyslog
+
+```
+systemctl restart rsyslog
+```
 
 Переключиться на Windows server
 переключить сетевой адаптер на DHCP
@@ -82,3 +104,25 @@ shared-network LAN1 {
 
 ```
 
+Настройка логирования
+
+Установка ПО rsyslog
+
+```
+apt install rsyslog -y
+```
+Настройка rsyslog
+```
+nano /etc/rsyslog.conf
+```
+Доавить в Rules строку
+
+```
+Local7.*        /var/log/dhcpd.log
+```
+
+Перезапуск rsyslog
+
+```
+systemctl restart rsyslog
+```
