@@ -108,3 +108,9 @@ systemctl restart rsyslog
 ```
 cat /var/log/dhcpd.log
 ```
+
+Проверка подключений
+
+```
+gate# netstat -tupna4
+```
