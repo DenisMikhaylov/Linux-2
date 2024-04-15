@@ -103,25 +103,8 @@ systemctl restart rsyslog
 
 ```
 
-Настройка логирования
-
-Установка ПО rsyslog
+Просмотр log
 
 ```
-apt install rsyslog -y
-```
-Настройка rsyslog
-```
-nano /etc/rsyslog.conf
-```
-Доавить в Rules строку
-
-```
-Local7.*        /var/log/dhcpd.log
-```
-
-Перезапуск rsyslog
-
-```
-systemctl restart rsyslog
+cat /var/log/dhcpd.log
 ```
