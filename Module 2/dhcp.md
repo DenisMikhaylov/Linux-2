@@ -99,7 +99,6 @@ systemctl restart rsyslog
 ```
 # dhcp-lease-list
 # less /var/lib/dhcp/dhcpd.leases
-# grep dhcp /var/log/syslog
 # dhcpd-pools -l /var/lib/dhcp/dhcpd.leases -c /etc/dhcp/dhcpd.conf
 
 ```
