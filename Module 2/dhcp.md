@@ -32,7 +32,7 @@ shared-network LAN1 {
     range 192.168.30.101 192.168.30.128;
     option routers 192.168.30.1;
     option domain-name "corp1.ru";
-    option domain-name-servers 192.168.30.1;
+    option domain-name-servers 192.168.30.1, 192.168.30.20;
     default-lease-time 600;
     max-lease-time 7200;
   }
