@@ -56,7 +56,7 @@ ping -c4 ya.ru
 Добавлем правило на gate
 
 ```
-iptables -t nat -A POSTROUTING -o eth1 -s 192.168.30.0/24 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o eth0 -s 192.168.30.0/24 -j MASQUERADE
 ```
 Проверяем
 
