@@ -20,3 +20,18 @@ gate# cat /etc/squid/squid.conf
 grep -Ev '^$|^#' /etc/squid/squid.conf
 ```
 
+```
+...
+# INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
+...
+После этого блока
+
+#http_access allow localnet
+acl our_networks src 192.168.30.0/24
+acl rambler src .rambler.ru
+
+http_access deny rambler
+http_access allow our_networks
+...
+
+```
