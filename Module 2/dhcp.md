@@ -110,7 +110,9 @@ cat /var/log/dhcpd.log
 ```
 
 Проверка подключений
-
+```
+apt install net-tools
+```
 ```
 gate# netstat -tupna4
 ```
