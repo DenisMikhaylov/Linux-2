@@ -51,3 +51,9 @@ squid -k check
 ```
 squid -k reconfigure
 ```
+
+Просмотр логов
+
+```
+ls /var/log/squid
+```
