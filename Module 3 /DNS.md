@@ -39,7 +39,9 @@ Cat /etc/bind/named.conf
                 8.8.8.8;
         };
        dnssec-validation no;
-       listen-on-v6 {::;}
+       // listen-on { 192.168.30.1; 127.0.0.1; }
+       listen-on-v6 { ::; };
+       
 
 ```
 Проверка конфигурации
