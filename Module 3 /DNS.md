@@ -20,6 +20,7 @@ gate:~# apt install bind9 -y
 
 ```
 Проверка сервиса
+применяем только при перенастройки интерфейсов
 ```
 systemctl status bind9
 ```
