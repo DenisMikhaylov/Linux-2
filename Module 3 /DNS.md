@@ -47,7 +47,7 @@ Cat /etc/bind/named.conf
 Проверка конфигурации
 
 ```
-# named-checkconf
+# named-checkconf -z
 ```
 
 Рестарт службы DNS
