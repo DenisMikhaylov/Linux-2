@@ -107,3 +107,17 @@ iptables -A INPUT -i eth0 -p udp --dport 53 -j DROP
 ```
 nslookup -q=A ccorp1.ru <ip address>
 ```
+```
+iptables -L
+```
+Сотрем правило
+```
+iptables --line-numbers -t nat -L
+
+```
+смотрим номер правила
+```
+iptables -D INPUT <ввести номер правила>
+```
+
+
