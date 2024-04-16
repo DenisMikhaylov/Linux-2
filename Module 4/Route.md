@@ -110,14 +110,16 @@ nslookup -q=A ccorp1.ru <ip address>
 ```
 iptables -L
 ```
-Сотрем правило
+
+Сmотрим номер правило
 ```
 iptables --line-numbers -t nat -L
 
 ```
 смотрим номер правила
+
 ```
 iptables -D INPUT <ввести номер правила>
 ```
-
+Восстановите правило использую iptables-restore
 
