@@ -55,5 +55,42 @@ service nfs-kernel-server force-reload
 Сервис в дебиане может быть быть выключен и замаскирован
 
 ```
+ls -l /lib/systemd/system/nfs-common.service
 ```
+Проверяем что есть /dev/null
+
+Удалем файл
+```
+rm /lib/systemd/system/nfs-common.service
+```
+Запускаем сервис
+
+```
+systemctl enable nfs-common
+systemctl start nfs-common
+```
+Смотрим доступные ресурсы
+
+```
+showmount -e gate.corp1.ru
+```
+Монтирование каталога
+```
+# mkdir /mnt/nfs
+# mount gate.corp1.ru:/var/nfs /mnt/nfs
+```
+Добавим в автозагрузку
+```
+# nano /etc/fstab
+```
+```
+192.168.30.1:/var/nfs  /mnt/nfs nfs4 defaults 0 0 
+```
+
+Примонтируем
+```
+mount /mnt/nfs
+```
+
+
 
