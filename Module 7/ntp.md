@@ -35,7 +35,7 @@ gate:~# apt install ntp
 ```
 Настройка
 ```
-gate# nano /etc/ntp.conf
+gate# nano /etc/ntpsec/ntp.conf
 ```
 ```
 server 0.ru.pool.ntp.org
