@@ -102,5 +102,6 @@ systemctl status systemd-timesyncd
 ```
 Смотрим поле Status
 
+Для Microsoft настройки производим в ручную или через GPO
 
 
