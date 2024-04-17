@@ -108,3 +108,27 @@ man 5 smb.conf
 ```
 
 может не подключится
+
+
+Автоматическое монтирование Samba на linux
+
+Устанавливаем Cifs
+
+```
+apt install samba-client cifs-utils -y
+```
+
+редактируем Fstab
+
+```
+nano /etc/fstab
+```
+
+```
+//gate.corp1.ru/share1 /home/student/samba cifs defaults,user=student,noauto 0 0
+```
+Создается пользователя student и каталог /home/student/samba
+
+```
+mount /home/student/samba
+```
