@@ -70,3 +70,37 @@ gate# ntpstat
 ```
 gate# ntpdate time.apple.com
 ```
+Настройка синхронизации с сервера gate
+Переходим на SRV1
+
+Проверяем синхронизацию
+```
+timedatectl
+```
+Настройка синхронизации
+```
+nano /etc/systemd/timesyncd.conf
+```
+```
+[time]
+NTP=gate.corp1.ru
+
+```
+перезапуск службы
+
+```
+systemctl restart systemd-timesyncd
+
+```
+Проверяем синхронизацию
+```
+timedatectl
+```
+
+```
+systemctl status systemd-timesyncd
+```
+Смотрим поле Status
+
+
+
