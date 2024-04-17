@@ -168,7 +168,7 @@ nano /etc/bind/named.conf.local
 ```
 Добавить настройку
 ```
-zone "corp1.кг" {
+zone "corp1.ru" {
 ...
         allow-transfer {<ip forward dns>;};
 ...
