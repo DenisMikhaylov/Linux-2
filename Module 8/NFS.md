@@ -92,5 +92,23 @@ showmount -e gate.corp1.ru
 mount /mnt/nfs
 ```
 
+Для правильной настройки лучше использовать autofs
+
+```
+# apt install autofs
+```
+Редактируем файл
+
+```
+nano /etc/auto.tab
+```
+```
+public	-ro		192.168.30.1:/var/nfs
+```
+Смотрим настройки автомонтирования
+
+```
+nano /etc/auto.master
+```
 
 
