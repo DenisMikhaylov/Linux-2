@@ -177,8 +177,16 @@ systemctl restart proftpd
 apt install ftp-ssl
 ```
 
+
+
 подключаемся к серверу соседа:
 ```
 ftp-ssl 127.0.0.1
 ```
 В случае возникновения проблем с TLS смотрите логи /var/log/proftpd/tls.log
+
+
+
+
+
+
