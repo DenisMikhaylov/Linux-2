@@ -125,7 +125,7 @@ nano /etc/fstab
 ```
 
 ```
-//gate.corp1.ru/share1 /home/student/samba cifs defaults,user=student,noauto 0 0
+//gate.corp1.ru/share1 /home/student/samba cifs defaults,user=smbuser1,noauto 0 0
 ```
 Создается пользователя student и каталог /home/student/samba
 
