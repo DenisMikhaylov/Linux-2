@@ -108,6 +108,12 @@ man 5 smb.conf
 ```
 
 может не подключится
+Открываем в Microsoft powershell
+
+```
+net use * \\192.168.30.1\share1 /USER:smbuser1
+```
+
 
 Сокрытие названия/версии сервиса
 ```
