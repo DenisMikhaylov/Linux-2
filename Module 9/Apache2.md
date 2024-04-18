@@ -120,3 +120,5 @@ named-checkconf -z
 ```
 rndc reload
 ```
+
+Протестируйте в браузере на Windows
