@@ -67,9 +67,7 @@ DocumentRoot /var/www/corp
 ```
 a2ensite www
 ```
-```
-systemctl reload apache2
-```
+
 Создаем структуру
 
 ```
@@ -88,6 +86,10 @@ nano /var/www/corp/index.html
 <h1>CORP</h1>
 <h1>Hello Student</h1>
 </html>
+```
+Перезапускаем
+```
+systemctl restart apache2
 ```
 Настраиваем DNS
 
