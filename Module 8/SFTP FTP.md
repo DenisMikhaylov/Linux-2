@@ -163,7 +163,7 @@ State or Province Name (full name) [Some­State]: Moscow
 Locality Name (eg, city) []: Moscow
 Organization Name (eg, company) [Internet Widgits Pty Ltd]: CLASS
 Organizational Unit Name (eg, section) []: IT
-Common Name (eg, YOUR name) []: c230.unix.specialist.ru
+Common Name (eg, YOUR name) []: corp1.ru
 Email Address []: root@localhost
 ```
 Перезапускаем службу 
