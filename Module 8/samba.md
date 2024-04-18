@@ -109,7 +109,18 @@ man 5 smb.conf
 
 может не подключится
 
+Сокрытие названия/версии сервиса
+```
+# nano smb.conf
+```
+```
+[global]
+...
+  server string = MS File Server
+...
+```
 
+Переключаемся на SRV1
 Автоматическое монтирование Samba на linux
 
 Устанавливаем Cifs
@@ -132,3 +143,5 @@ nano /etc/fstab
 ```
 mount /home/student/samba
 ```
+
+
