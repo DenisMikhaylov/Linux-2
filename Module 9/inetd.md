@@ -92,6 +92,9 @@ www2        CNAME        srv2
 ```
 named-checkconf -z
 ```
+```
+rndc reload
+```
 
 
 Тестирйем на Windows в браузере
