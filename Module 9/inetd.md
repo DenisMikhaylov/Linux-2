@@ -76,6 +76,23 @@ fi
 <h1>Hello Student</h1>
 </html>
 ```
+Настраиваем DNS
+
+Переходим на gate
+```
+nano /etc/bind/corp1.ru
+```
+Добавляем строку и меняем серийный номер
+```
+202404181300
+www2        CNAME        srv2
+```
+Проверяем DNS
+
+```
+named-checkconf -z
+```
+
 
 Тестирйем на Windows в браузере
 http://srv2.corp.ru
