@@ -94,7 +94,7 @@ nano /etc/bind/corp1.ru
 Добавляем строку и меняем серийный номер
 ```
 202404181300
-www        CNAME        gate
+www1        CNAME        gate
 ```
 Проверяем DNS
 
@@ -104,3 +104,5 @@ named-checkconf -z
 ```
 rndc reload
 ```
+
+Протестируйте в браузере на Windows
