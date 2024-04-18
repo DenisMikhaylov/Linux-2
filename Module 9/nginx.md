@@ -85,3 +85,22 @@ nginx -t
 ```
 systemctl restart nginx
 ```
+Настраиваем DNS
+
+Переходим на gate
+```
+nano /etc/bind/corp1.ru
+```
+Добавляем строку и меняем серийный номер
+```
+202404181300
+www        CNAME        gate
+```
+Проверяем DNS
+
+```
+named-checkconf -z
+```
+```
+rndc reload
+```
