@@ -76,3 +76,7 @@ fi
 <h1>Hello Student</h1>
 </html>
 ```
+
+Тестирйем на Windows в браузере
+http://srv2.corp.ru
+
