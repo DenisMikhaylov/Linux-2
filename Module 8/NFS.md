@@ -100,15 +100,18 @@ mount /mnt/nfs
 Редактируем файл
 
 ```
-nano /etc/auto.tab
+nano /etc/auto.misc
 ```
 ```
-public	-ro		192.168.30.1:/var/nfs
-```
-Смотрим настройки автомонтирования
+/mnt/nfs  -fstype=nfs4,rw 192.168.30.1:/var/nfs
 
 ```
-nano /etc/auto.master
 ```
+service autofs restart
+```
+Проверяем
 
+Создаем файл в папке /var/nfs на gate с названием test
+
+на srv1 переходим в папку /mnt/nfs и проверяем налицие файла test
 
