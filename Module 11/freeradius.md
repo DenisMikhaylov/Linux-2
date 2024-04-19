@@ -36,6 +36,15 @@ user1 Cleartext-Password := "rpassword1"
 user2 Cleartext-Password := "rpassword2", Simultaneous-Use := 1
 student Cleartext-Password := "password"
 ```
+или
+```
+user1 Cleartext-Password := "rpassword1"
+     Framed-IP-Address = 192.168.30.101
+
+user2 Cleartext-Password := "rpassword2", Simultaneous-Use := 1
+     Framed-IP-Address = 192.168.30.102,
+```
+
 ```
 # cat /etc/freeradius/3.0/radiusd.conf
 ```
