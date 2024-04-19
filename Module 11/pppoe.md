@@ -35,3 +35,6 @@ root@gate:~# pppoe-server -I eth0 -R 192.168.30.1
 ```
 gate:~# tail -f /var/log/syslog
 ```
+
+
+Настройка клиента Windows PPPoe
