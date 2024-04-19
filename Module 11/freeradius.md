@@ -88,3 +88,19 @@ check_with_nas = no
 
 # service freeradius restart
 ```
+
+
+Тестирование сервера
+
+```
+# apt install freeradius-utils
+```
+```
+$ radtest user1 rpassword1 127.0.0.1 0 testing123
+
+$ echo "User-Name=student,User-Password=password,NAS-IP-Address=127.0.0.1" | radclient localhost auth testing123
+```
+
+```
+# tail -f /var/log/freeradius/radius.log
+```
