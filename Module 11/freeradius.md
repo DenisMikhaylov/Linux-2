@@ -1,3 +1,6 @@
+Пример 
+https://www.altlinux.org/FreeRADIUS
+
 Установка
 ```
 # apt install freeradius
