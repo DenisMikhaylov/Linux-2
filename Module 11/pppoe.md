@@ -20,7 +20,6 @@ pppoe
 ```
 ```
 +chap
-# ms-dns 192.168.X.10
 ```
 ```
 gate:~# pppoe-server -I eth0
