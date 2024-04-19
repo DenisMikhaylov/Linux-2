@@ -8,7 +8,7 @@ https://www.altlinux.org/FreeRADIUS
 Настройка сервера
 Настройка c использованием текстовых файлов
 ```
-# cat /etc/freeradius/3.0/clients.conf
+# nano /etc/freeradius/3.0/clients.conf
 ```
 ```
 ...
@@ -17,16 +17,8 @@ client gate.corp1.ru {
         shortname       = gate
 }
 
-client switch {
-       secret          = testing123
-       shortname       = switch
-}
 ```
-```
-#client switch1 { secret = testing123 }
-#client switch2 { secret = testing123 }
-#client switch3 { secret = testing123 }
-```
+
 Настройка
 ```
 # :> /etc/freeradius/3.0/users
@@ -49,7 +41,7 @@ user2 Cleartext-Password := "rpassword2", Simultaneous-Use := 1
 ```
 
 ```
-# cat /etc/freeradius/3.0/radiusd.conf
+# nano /etc/freeradius/3.0/radiusd.conf
 ```
 ```
 ...
