@@ -77,7 +77,7 @@ nameserver 127.0.0.1
 nano /etc/bind/named.conf.local
 ```
 ```
-zone "corp1.ru" {
+zone "corp.ru" {
         type master;
         file "/etc/bind/corp.ru";
 };
@@ -92,11 +92,11 @@ $TTL    3h
 @    IN  SOA gate   root.gate  2024041601 1d 12h  1w  3h
          NS  gate
          NS  srv1
-         A   192.168.30.1
+         A   192.168.10.1
          MX  10  gate
-gate     A   192.168.30.1
-srv1     A   192.168.30.20
-srv2     A   192.168.30.21
+gate     A   192.168.10.1
+srv1     A   192.168.10.10
+srv2     A   192.168.10.20
 
 ```
 
@@ -104,7 +104,7 @@ srv2     A   192.168.30.21
 
 ```
 # named-checkconf -z
-# named-checkzone corp1.ru /etc/bind/corp.ru
+# named-checkzone corp.ru /etc/bind/corp.ru
 ```
 
 Перезапуск DNS
@@ -127,8 +127,8 @@ nano /etc/bind/10.168.192.IN-ADDR.ARPA
 ```
 ```
 $TTL    3h
-@  SOA gate.corp1.ru  root.gate.corp.ru. 1 1d 12h  1w  3h
-         NS  gate.corp1.ru
+@  SOA gate.corp.ru  root.gate.corp.ru. 1 1d 12h  1w  3h
+         NS  gate.corp.ru
 1    PTR  gate.corp.ru
 20   PRT  srv1.corp.ru
 21   PRT  srv2.corp.ru
