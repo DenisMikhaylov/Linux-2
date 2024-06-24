@@ -130,7 +130,7 @@ $TTL    3h
 @  SOA gate.corp.ru  root.gate.corp.ru. 1 1d 12h  1w  3h
          NS  gate.corp.ru
 1    PTR  gate.corp.ru
-20   PRT  srv1.corp.ru
-21   PRT  srv2.corp.ru
+20   PTR  srv1.corp.ru
+21   PTR  srv2.corp.ru
 
 ```
