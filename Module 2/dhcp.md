@@ -28,11 +28,11 @@ gate# nano /etc/dhcp/dhcpd.conf
 log-facility local7;
 
 shared-network LAN1 {
-  subnet 192.168.30.0 netmask 255.255.255.0 {
-    range 192.168.30.101 192.168.30.128;
-    option routers 192.168.30.1;
-    option domain-name "corp1.ru";
-    option domain-name-servers 192.168.30.1, 192.168.30.20;
+  subnet 192.168.10.0 netmask 255.255.255.0 {
+    range 192.168.10.101 192.168.10.128;
+    option routers 192.168.10.1;
+    option domain-name "corp.ru";
+    option domain-name-servers 192.168.10.1, 192.168.10.20;
     default-lease-time 600;
     max-lease-time 7200;
   }
