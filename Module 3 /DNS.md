@@ -40,7 +40,7 @@ Cat /etc/bind/named.conf
                 8.8.8.8;
         };
        dnssec-validation no;
-       // listen-on { 192.168.30.1; 127.0.0.1; }
+       // listen-on { 192.168.10.1; 127.0.0.1; }
        listen-on-v6 { ::; };
        
 
@@ -79,13 +79,13 @@ nano /etc/bind/named.conf.local
 ```
 zone "corp1.ru" {
         type master;
-        file "/etc/bind/corp1.ru";
+        file "/etc/bind/corp.ru";
 };
 ```
 
 создание файла zone
 ```
-nano /etc/bind/corp1.ru
+nano /etc/bind/corp.ru
 ```
 ```
 $TTL    3h
@@ -104,7 +104,7 @@ srv2     A   192.168.30.21
 
 ```
 # named-checkconf -z
-# named-checkzone corp1.ru /etc/bind/corp1.ru
+# named-checkzone corp1.ru /etc/bind/corp.ru
 ```
 
 Перезапуск DNS
@@ -116,21 +116,21 @@ srv2     A   192.168.30.21
 Тестирование
 
 ```
-nslookup -q=SOA corp1.ru
-nslookup -q=A gate.corp1.ru
+nslookup -q=SOA corp.ru
+nslookup -q=A gate.corp.ru
 ```
 
 Создание обратной zone
 
 ```
-nano /etc/bind/30.168.192.IN-ADDR.ARPA
+nano /etc/bind/10.168.192.IN-ADDR.ARPA
 ```
 ```
 $TTL    3h
-@  SOA gate.corp1.ru  root.gate.corp1.ru. 1 1d 12h  1w  3h
+@  SOA gate.corp1.ru  root.gate.corp.ru. 1 1d 12h  1w  3h
          NS  gate.corp1.ru
-1    PTR  gate.corp1.ru
-20   PRT  srv1.corp1.ru
-21   PRT  srv2.corp1.ru
+1    PTR  gate.corp.ru
+20   PRT  srv1.corp.ru
+21   PRT  srv2.corp.ru
 
 ```
