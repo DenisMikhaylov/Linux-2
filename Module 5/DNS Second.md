@@ -174,12 +174,4 @@ options {
 ```
 nano /etc/bind/named.conf.local
 ```
-Добавить настройку
-```
-zone "corp.ru" {
-...
-        allow-transfer {8.8.8.8;};
-...
-};
 
-```
