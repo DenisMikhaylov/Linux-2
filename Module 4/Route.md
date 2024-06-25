@@ -56,7 +56,7 @@ ping -c4 ya.ru
 Добавлем правило на gate
 
 ```
-iptables -t nat -A POSTROUTING -o eth0 -s 192.168.30.0/24 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o eth0 -s 192.168.10.0/24 -j MASQUERADE
 ```
 Проверяем
 
@@ -105,7 +105,7 @@ iptables -A INPUT -i eth0 -p udp --dport 53 -j DROP
 
 Можно проверить теперь работу DNS коллег указывая из ip eth0 от Gate
 ```
-nslookup -q=A ccorp1.ru <ip address>
+nslookup -q=A ccorp.ru <ip address>
 ```
 ```
 iptables -L
