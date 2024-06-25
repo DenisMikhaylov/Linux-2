@@ -25,7 +25,7 @@ forwarders {
                 8.8.8.8;
         };
        dnssec-validation no;
-       // listen-on { 192.168.30.1; 127.0.0.1; }
+       // listen-on { 192.168.10.1; 127.0.0.1; }
        listen-on-v6 { ::; };
 ```
 
@@ -33,11 +33,11 @@ forwarders {
 nano /etc/bind/named.conf.local
 ```
 ```
-zone "corp1.ru" {
+zone "corp.ru" {
         type slave;
         file "/var/cache/bind/corp1.ru";
         masterfile-format text;
-        masters { 192.168.30.1; };
+        masters { 192.168.10.1; };
 };
 ```
 
@@ -57,7 +57,7 @@ ls /var/cache/bind
 Должен появиться фаил с нашей зоной
 
 ```
-cat /var/cache/bind/corp1.ru
+cat /var/cache/bind/corp.ru
 ```
 
 НАстройки на себя DNS
@@ -78,7 +78,7 @@ nano /etc/bind/named.conf
 include "/etc/bind/named.conf.options";
 view "inside" {
   match-clients {
-    192.168.30/24;
+    192.168.10/24;
     127/8;
   };
   include "/etc/bind/named.conf.local";
@@ -88,9 +88,9 @@ view "inside" {
 view "outside" {
   match-clients {"any";};
   allow-recursion {"any";};
-  zone "corp1.ru" {
+  zone "corp.ru" {
     type master;
-    file "/etc/bind/corp1.ru.out"
+    file "/etc/bind/corp.ru.out"
   };
 };
 ```
@@ -106,16 +106,16 @@ view "outside" {
 ddns-update-style interim;
 ddns-ttl 60;
 
-subnet 192.168.X.0 netmask 255.255.255.0 {
+subnet 192.168.10.0 netmask 255.255.255.0 {
 
 
 include "/etc/dhcp/rndc.key";
-  zone corp1.ru. {
-    primary 192.168.30.1;
+  zone corp.ru. {
+    primary 192.168.10.1;
     key rndc-key;
   }
-  zone 30.168.192.in-addr.arpa. {
-    primary 192.168.30.1;
+  zone 10.168.192.in-addr.arpa. {
+    primary 192.168.10.1;
     key rndc-key;
   }
 ```
@@ -136,12 +136,12 @@ nano  /etc/bind/named.conf
 ```
 ```
 ...
-        zone "corp1.ru" {
+        zone "corp.ru" {
 ...
                allow-update { key "rndc-key"; };
         };
 ...
-        zone "30.168.192.IN-ADDR.ARPA" {
+        zone "10.168.192.IN-ADDR.ARPA" {
 ...
                allow-update { key "rndc-key"; };
         };
@@ -158,7 +158,7 @@ nano /etc/bind/named.conf.options
 ```
 options {
 ...
-        allow-recursion {192.168.30/24; 127/8;};
+        allow-recursion {192.168.10/24; 127/8;};
 ...
 }
 
@@ -168,9 +168,9 @@ nano /etc/bind/named.conf.local
 ```
 Добавить настройку
 ```
-zone "corp1.ru" {
+zone "corp.ru" {
 ...
-        allow-transfer {<ip forward dns>;};
+        allow-transfer {8.8.8.8;};
 ...
 };
 
