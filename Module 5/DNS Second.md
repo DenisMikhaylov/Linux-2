@@ -35,7 +35,7 @@ nano /etc/bind/named.conf.local
 ```
 zone "corp.ru" {
         type slave;
-        file "/var/cache/bind/corp1.ru";
+        file "/var/cache/bind/corp.ru";
         masterfile-format text;
         masters { 192.168.10.1; };
 };
