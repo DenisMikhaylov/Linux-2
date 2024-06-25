@@ -139,7 +139,7 @@ include "/etc/dhcp/rndc.key";
 cp /etc/bind/rndc.key /etc/dhcp/
 ```
 ```
-nano  /etc/bind/named.conf
+nano  /etc/bind/named.conf.local
 ```
 ```
 ...
