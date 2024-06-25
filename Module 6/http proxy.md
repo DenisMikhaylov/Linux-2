@@ -32,7 +32,7 @@ grep -Ev '^$|^#' /etc/squid/squid.conf
 После этого блока
 
 #http_access allow localnet
-acl our_networks src 192.168.30.0/24
+acl our_networks src 192.168.10.0/24
 acl rambler dstdomain .rambler.ru
 
 http_access deny rambler
