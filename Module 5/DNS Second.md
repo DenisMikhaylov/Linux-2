@@ -137,7 +137,6 @@ include "/etc/dhcp/rndc.key";
 # mv /etc/bind/corp* /var/cache/bind/
 # chown -R bind /var/cache/bind/
 cp /etc/bind/rndc.key /etc/dhcp/
-chown dhcpd /etc/dhcp/rndc.key
 ```
 ```
 nano  /etc/bind/named.conf
