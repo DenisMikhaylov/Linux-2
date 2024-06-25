@@ -100,9 +100,9 @@ view "outside" {
 ```
 $TTL    3h
 corp.ru. SOA ns root.server 1 1d 12h 1w 3h
+;
 
-;...
-
+```
 Настройка Динамического обновления
 
 Подключение к серверу Gate
