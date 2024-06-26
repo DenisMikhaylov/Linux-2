@@ -1,5 +1,5 @@
 # Настройка NFS
-
+Подключаемся к серверу gate
 Установка NFS сервера
 
 ```
@@ -33,7 +33,7 @@ chmod 777 /var/nfs
 Добавлем строку
 
 ```
-/var/nfs  192.168.30.20(rw,sync,no_subtree_check)
+/var/nfs  192.168.10.10(rw,sync,no_subtree_check)
 ```
 
 Перезапускаем сервис
@@ -72,19 +72,19 @@ systemctl start nfs-common
 Смотрим доступные ресурсы
 
 ```
-showmount -e gate.corp1.ru
+showmount -e gate.corp.ru
 ```
 Монтирование каталога
 ```
 # mkdir /mnt/nfs
-# mount gate.corp1.ru:/var/nfs /mnt/nfs
+# mount gate.corp.ru:/var/nfs /mnt/nfs
 ```
 Добавим в автозагрузку
 ```
 # nano /etc/fstab
 ```
 ```
-192.168.30.1:/var/nfs  /mnt/nfs nfs4 defaults 0 0 
+192.168.10.1:/var/nfs  /mnt/nfs nfs4 defaults 0 0 
 ```
 
 Примонтируем
@@ -103,7 +103,7 @@ mount /mnt/nfs
 nano /etc/auto.misc
 ```
 ```
-/mnt/nfs  -fstype=nfs4,rw 192.168.30.1:/var/nfs
+/mnt/nfs  -fstype=nfs4,rw 192.168.10.1:/var/nfs
 
 ```
 ```
