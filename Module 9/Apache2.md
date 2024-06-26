@@ -59,7 +59,7 @@ cp /etc/apache2/sites-available/000-default.conf  www.conf
 nano /etc/apache2/sites-available/www.conf
 ```
 ```
-ServerName www.corp1.ru
+ServerName www.corp.ru
 DocumentRoot /var/www/corp
 ```
 Активируем сайт
@@ -95,7 +95,7 @@ systemctl restart apache2
 
 Переходим на gate
 ```
-nano /etc/bind/corp1.ru
+nano /etc/bind/corp.ru
 ```
 Добавляем строку и меняем серийный номер
 ```
