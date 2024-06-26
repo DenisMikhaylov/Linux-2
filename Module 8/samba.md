@@ -53,7 +53,7 @@ testparm
 переходим на Windows 
 
 ```
-//192.168.30.1/share1
+//192.168.10.1/share1
 ```
 
 Можно с хоста по внешнему ip gate
@@ -96,7 +96,7 @@ testparm
 переходим на Windows 
 
 ```
-//192.168.30.1/share2
+//192.168.10.1/share2
 ```
 
 Можно с хоста по внешнему ip gate
@@ -111,7 +111,7 @@ man 5 smb.conf
 Открываем в Microsoft powershell
 
 ```
-net use * \\192.168.30.1\share1 /USER:smbuser
+net use * \\192.168.10.1\share1 /USER:smbuser
 ```
 
 
@@ -142,7 +142,7 @@ nano /etc/fstab
 ```
 
 ```
-//gate.corp1.ru/share1 /home/student/samba cifs defaults,user=smbuser,noauto 0 0
+//gate.corp.ru/share1 /home/student/samba cifs defaults,user=smbuser,noauto 0 0
 ```
 Создается пользователя student и каталог /home/student/samba
 
