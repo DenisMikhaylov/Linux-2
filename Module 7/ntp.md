@@ -83,7 +83,7 @@ nano /etc/systemd/timesyncd.conf
 ```
 ```
 [time]
-NTP=gate.corp1.ru
+NTP=gate.corp.ru
 
 ```
 перезапуск службы
