@@ -98,7 +98,13 @@ mount /mnt/nfs
 # apt install autofs
 ```
 Редактируем файл
-
+```
+nano /etc/auto.master 
+```
+Добавляем в конец
+```
+/- /etc/auto.misc
+```
 ```
 nano /etc/auto.misc
 ```
