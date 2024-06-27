@@ -26,7 +26,7 @@ gate:~# pppoe-server -I eth0
 
 или
 
-root@gate:~# pppoe-server -I eth0 -R 192.168.30.1
+root@gate:~# pppoe-server -I eth0 -R 192.168.10.1
 ```
 
 
