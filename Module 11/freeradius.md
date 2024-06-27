@@ -34,10 +34,10 @@ student Cleartext-Password := "password"
 или
 ```
 user1 Cleartext-Password := "rpassword1"
-     Framed-IP-Address = 192.168.30.101
+     Framed-IP-Address = 192.168.10.30
 
 user2 Cleartext-Password := "rpassword2", Simultaneous-Use := 1
-     Framed-IP-Address = 192.168.30.102,
+     Framed-IP-Address = 192.168.10.10,
 ```
 
 ```
