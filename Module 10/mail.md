@@ -135,14 +135,14 @@ ssl = no
 Устанавливаем mozilla thunderbird
 Вводим параметры подключения
 ```
-ivan@corp1.ru
+ivan@corp.ru
 ваш пароль
 ```
 Проверяем настройки
 ```
 manual settings
 ```
-Отправьте сообщение на алиас hr@corp1.ru
+Отправьте сообщение на алиас hr@corp.ru
 
 Переключаемся на gate
 ```
@@ -171,7 +171,7 @@ $config['default_host'] = 'localhost';
 $config['smtp_host'] = '25';
 $config['smtp_user'] = '';
 $config['smtp_pass'] = '';
-$rcmail_config['mail_domain'] = 'corp1.ru';
+$rcmail_config['mail_domain'] = 'corp.ru';
 
 ```
 ```
@@ -190,7 +190,7 @@ systemctl restart apache2
 
 ```
 Открываем проводник
-Gate.corp1.ru/roundcube
+Gate.corp.ru/roundcube
 пользователь ivan
 ```
 
