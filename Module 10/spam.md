@@ -27,9 +27,6 @@ gate# spamassassin --lint
 ```
 gate# sa-update
 
-gate# mail root
-
-gate# spamassassin -tx < /var/mail/root
 ```
 
 Запуск
