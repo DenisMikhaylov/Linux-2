@@ -10,7 +10,7 @@
 ```
 ```
 Internet sile
-System mail name = corp1.ru
+System mail name = corp.ru
 ```
 
 Проверим работу
@@ -19,9 +19,9 @@ System mail name = corp1.ru
 telnet 127.0.0.1 25
 ```
 ```
-HELO gate.corp1.ru
-MAIL FROM: root@corp1.ru
-RCPT TO: ivan@corp1.ru
+HELO gate.corp.ru
+MAIL FROM: root@corp.ru
+RCPT TO: ivan@corp.ru
 RCPT TO: mikhaylovd@outlook.com
 DATA
 Hello
@@ -57,8 +57,8 @@ nano /etc/postfix/mail.cf
 telnet 127.0.0.1 25
 ```
 ```
-HELO gate.corp1.ru
-MAIL FROM: root@gate.corp1.ru
+HELO gate.corp.ru
+MAIL FROM: root@gate.corp.ru
 RCPT TO: ivan@corp1.ru
 DATA
 Hello
