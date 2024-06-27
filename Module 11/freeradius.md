@@ -12,7 +12,7 @@ https://www.altlinux.org/FreeRADIUS
 ```
 ```
 ...
-client gate.corp1.ru {
+client gate.corp.ru {
         secret          = testing123
         shortname       = gate
 }
