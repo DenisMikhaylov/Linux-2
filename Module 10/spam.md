@@ -15,7 +15,7 @@ rewrite_header Subject *****SPAM*****
 report_safe 0                        
 use_bayes 0
 # required_score 5.0
-trusted_networks 192.168.30        # must be set for cgpav because default ALL_TRUSTED !!!
+trusted_networks 192.168.10        # must be set for cgpav because default ALL_TRUSTED !!!
 add_header all Report _REPORT_
 score BODY_SINGLE_WORD 10.0
 ```
