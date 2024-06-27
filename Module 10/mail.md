@@ -21,7 +21,7 @@ telnet 127.0.0.1 25
 ```
 HELO gate.corp.ru
 MAIL FROM: root@corp.ru
-RCPT TO: ivan@corp.ru
+RCPT TO: student@corp.ru
 RCPT TO: mikhaylovd@outlook.com
 DATA
 Hello
@@ -49,7 +49,7 @@ passwd anna
 
 Просмотрим файл postfix
 ```
-nano /etc/postfix/mail.cf
+nano /etc/postfix/main.cf
 ```
 Проверим работу
 
@@ -59,7 +59,7 @@ telnet 127.0.0.1 25
 ```
 HELO gate.corp.ru
 MAIL FROM: root@gate.corp.ru
-RCPT TO: ivan@corp1.ru
+RCPT TO: ivan@corp.ru
 DATA
 Hello
 .
