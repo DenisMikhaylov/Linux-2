@@ -37,9 +37,9 @@ root@gate:~# nano /etc/default/spamassassin
 CRON=1
 ```
 ```
-gate:~# systemctl enable spamassassin
+gate:~# systemctl enable spamd
 
-gate:~# service spamassassin start
+gate:~# service spamd start
 ```
 
 Подключение SpamAssassin через milter интерфейс
