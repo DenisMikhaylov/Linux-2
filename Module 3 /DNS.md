@@ -126,7 +126,7 @@ nano /etc/bind/named.conf.local
 ```
 Добавить в конец файла
 ```
-zone "10.168.192.in-addr.arpa" IN {
+zone "10.168.192.in-addr.arpa" in {
   type master;
   file "/etc/bind/10.168.192.IN-ADDR.ARPA";
 };
