@@ -105,7 +105,7 @@ iptables -A INPUT -i eth0 -p udp --dport 53 -j DROP
 
 Можно проверить теперь работу DNS коллег указывая из ip eth0 от Gate
 ```
-nslookup -q=A ccorp.ru <ip address>
+nslookup -q=A corp.ru <ip address>
 ```
 ```
 iptables -L
