@@ -121,7 +121,15 @@ nslookup -q=A gate.corp.ru
 ```
 
 Создание обратной zone
-
+```
+nano /etc/bind/named.conf.local
+```
+```
+zone "10.168.192.IN-ADDR.ARPA" IN {
+  type master;
+  file "/etc/bind/10.168.192.IN-ADDR.ARPA";
+};
+```
 ```
 nano /etc/bind/10.168.192.IN-ADDR.ARPA
 ```
