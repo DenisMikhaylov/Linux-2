@@ -141,8 +141,8 @@ $TTL    3h
      NS  gate.corp.ru.
 
 1    PTR  gate.corp.ru.
-20   PTR  srv1.corp.ru.
-21   PTR  srv2.corp.ru.
+10   PTR  srv1.corp.ru.
+20   PTR  srv2.corp.ru.
 
 ```
 ```
