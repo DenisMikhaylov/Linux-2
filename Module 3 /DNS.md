@@ -137,8 +137,9 @@ nano /etc/bind/10.168.192.IN-ADDR.ARPA
 ```
 ```
 $TTL    3h
-@  SOA corp.ru.  root.gate.corp.ru. 1 1d 12h  1w  3h
-         NS  gate.corp.ru.
+@ IN SOA corp.ru.  root.gate.corp.ru. 1 1d 12h  1w  3h
+     NS  gate.corp.ru.
+
 1    PTR  gate.corp.ru.
 20   PTR  srv1.corp.ru.
 21   PTR  srv2.corp.ru.
