@@ -111,11 +111,12 @@ corp.ru. SOA ns root.server 1 1d 12h 1w 3h
 # nano dhcpd.conf
 ```
 ```
+ddns-updates on;
 ddns-update-style interim;
+ignore client-updates;
+update-static-leases on;
+
 ddns-ttl 60;
-
-subnet 192.168.10.0 netmask 255.255.255.0 {
-
 
 include "/etc/dhcp/rndc.key";
   zone corp.ru. {
@@ -145,6 +146,7 @@ nano  /etc/bind/named.conf.local
 ...
         zone "corp.ru" {
 ...
+               file "/var/cache/bind/corp.ru"
                allow-update { key "rndc-key"; };
         };
 ...
