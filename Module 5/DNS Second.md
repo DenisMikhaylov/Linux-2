@@ -171,9 +171,19 @@ options {
 
 ```
 Просмотр статистики обращений к DNS серверу
+
+```
+nano /etc/bind/named.conf.options
+```
+```
+options{
+
+  zone-statistics yes;
+}
+```
 ```
 # rndc stats
-# cat /var/named/var/stats/named.stats
+# cat /var/cache/bind/named.stats
 success - число запросов, не вызвавших ошибок или возврата клиенту ссылки
 referral - число запросов, на которые сервер вернул клиенту ссылки
 nxrrset - несуществующих записей запрошенного типа для доменного имени
