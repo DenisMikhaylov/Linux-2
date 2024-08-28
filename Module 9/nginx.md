@@ -52,7 +52,7 @@ server {
         root /var/www/example_1.ru/html;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name www.corp1.ru;
+        server_name www.corp.ru;
 
         location / {
                 try_files $uri $uri/ =404;
