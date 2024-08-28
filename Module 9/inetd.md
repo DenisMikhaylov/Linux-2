@@ -81,6 +81,8 @@ fi
 Переходим на gate
 ```
 nano /etc/bind/corp.ru
+или
+nano /var/cache/bind/corp.ru
 ```
 Добавляем строку и меняем серийный номер
 ```
