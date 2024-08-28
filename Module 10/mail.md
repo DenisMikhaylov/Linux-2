@@ -168,7 +168,7 @@ nano /var/lib/roundcube/config/config.inc.php
 ```
 ```
 $config['default_host'] = 'localhost';
-$config['smtp_host'] = '25';
+$config['smtp_host'] = 'localhost:25';
 $config['smtp_user'] = '';
 $config['smtp_pass'] = '';
 $rcmail_config['mail_domain'] = 'corp.ru';
