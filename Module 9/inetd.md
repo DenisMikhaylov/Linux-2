@@ -80,7 +80,7 @@ fi
 
 Переходим на gate
 ```
-nano /etc/bind/corp1.ru
+nano /etc/bind/corp.ru
 ```
 Добавляем строку и меняем серийный номер
 ```
