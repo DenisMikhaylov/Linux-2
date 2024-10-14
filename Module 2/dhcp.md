@@ -67,6 +67,21 @@ shared-network LAN1 {
 # dhcpd-pools -l /var/lib/dhcp/dhcpd.leases -c /etc/dhcp/dhcpd.conf
 
 ```
+
+Создание резервации
+
+Открыть файл конфигурации 
+```
+gate# nano /etc/dhcp/dhcpd.conf
+```
+Добавить в конец файла
+Узнать mac адресс windows клиента
+```
+host Base18B {
+hardware ethernet 00:1F:6A:21:71:3F;
+fixed-address 192.168.10.101;
+}
+```
 Настройка логирования
 
 Установка ПО rsyslog
