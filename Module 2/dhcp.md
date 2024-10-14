@@ -82,6 +82,15 @@ hardware ethernet 00:1F:6A:21:71:3F;
 fixed-address 192.168.10.101;
 }
 ```
+
+Перезапуск службы DHCP
+
+```
+# service isc-dhcp-server restart
+
+# service isc-dhcp-server status
+```
+
 Настройка логирования
 
 Установка ПО rsyslog
