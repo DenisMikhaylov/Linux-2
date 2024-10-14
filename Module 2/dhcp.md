@@ -114,7 +114,7 @@ Local7.*        /var/log/dhcpd.log
 systemctl restart rsyslog
 ```
 
-Переключиться на Windows server
+Переключиться на Windows client виртуальная машина
 переключить сетевой адаптер на DHCP
 
 Переключиться на Gate и проверить статистику повторно
