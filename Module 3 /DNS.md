@@ -27,7 +27,7 @@ systemctl status bind9
 Проверка состовляемой конфигурации
 
 ```
-Cat /etc/bind/named.conf
+gate# cat /etc/bind/named.conf
 ```
 
 Настройка сервера перенаправляющего запросы на DNS cервер провайдера
