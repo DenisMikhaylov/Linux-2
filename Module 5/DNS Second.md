@@ -108,7 +108,7 @@ corp.ru. SOA ns root.server 1 1d 12h 1w 3h
 Подключение к серверу Gate
 
 ```
-# nano dhcpd.conf
+# nano /etc/dhcp/dhcpd.conf
 ```
 ```
 ddns-updates on;
