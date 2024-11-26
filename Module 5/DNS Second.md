@@ -25,7 +25,7 @@ forwarders {
                 8.8.8.8;
         };
        dnssec-validation no;
-       // listen-on { 192.168.10.1; 127.0.0.1; }
+       listen-on { 192.168.10.10; 127.0.0.1; };
        listen-on-v6 { ::; };
 ```
 
