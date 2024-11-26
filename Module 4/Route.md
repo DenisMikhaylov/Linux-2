@@ -122,4 +122,8 @@ iptables --line-numbers -t nat -L
 iptables -D INPUT <ввести номер правила>
 ```
 Восстановите правило использую iptables-restore
-
+Добавить правило
+```
+iptables -A INPUT -i eth0 -p udp --dport 22 -j DROP
+iptables -t nat -A PREROUTING -i eth0 --destination <IP ETH0> -p tcp --dport 2222 -j DNAT --to-destination 192.168.10.10:22
+```
