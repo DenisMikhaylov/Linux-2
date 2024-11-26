@@ -126,4 +126,5 @@ iptables -D INPUT <ввести номер правила>
 ```
 iptables -A INPUT -i eth0 -p udp --dport 22 -j DROP
 iptables -t nat -A PREROUTING -i eth0 --destination <IP ETH0> -p tcp --dport 2222 -j DNAT --to-destination 192.168.10.10:22
+iptables -t nat -A PREROUTING -i eth0 --destination <IP ETH0> -p tcp --dport 2221 -j DNAT --to-destination 192.168.10.1:22
 ```
