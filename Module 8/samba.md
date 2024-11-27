@@ -11,12 +11,14 @@ useradd smbuser -s /usr/sbin/nologin
 passwd smbuser
 or
 adduser
+useradd Administrator
 ```
 пароль Pa$$w0rd
 
 Создаем пользователя для samba
 ```
 smbpasswd -a smbuser
+smbpasswd -a Administrator
 ```
 пароль Pa$$w0rd
 
