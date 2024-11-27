@@ -120,7 +120,7 @@ net use * \\192.168.10.1\share1 /USER:smbuser
 
 Сокрытие названия/версии сервиса
 ```
-# nano smb.conf
+# nano /etc/samba/smb.conf
 ```
 ```
 [global]
