@@ -73,17 +73,21 @@ nano /etc/samba/smb.conf
 ```
 добавляем в конец
 ```
+[global]
+   guest account = nobody
 [share2]
    path = /var/share2
-   guest ok = no
-   read only = no
-   # valid user - student как пример ограничение доступа по пользователям
+   guest ok = yes
+   public = yes
+   writable = yes
+   available = yes
 ```
 Создаем каталог
 
 ```
 mkdir /var/share2
-chown smbuser.smbuser /var/share2
+chown nobody:nogroup /var/share2
+chmod 0775 /var/share2
 ls -la /var/share2
 ```
 
@@ -126,6 +130,7 @@ net use * \\192.168.10.1\share1 /USER:smbuser
 [global]
 ...
   server string = MS File Server
+
 ...
 ```
 
