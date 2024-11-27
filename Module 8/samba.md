@@ -12,6 +12,7 @@ passwd smbuser
 or
 adduser
 useradd Administrator
+useradd student -m
 ```
 пароль Pa$$w0rd
 
