@@ -1,4 +1,8 @@
 Установка на Хост WinSCP
+```
+useradd student -m
+```
+пароль Pa$$w0rd
 
 Скачать и установить WinSCP на хост
 
