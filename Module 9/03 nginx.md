@@ -97,7 +97,7 @@ systemctl restart nginx
 ```
 nano /etc/bind/corp.ru
 или
-nano /etc/nginx/nginx.conf
+nano /var/cache/bind/corp.ru
 ```
 Добавляем строку и меняем серийный номер
 ```
