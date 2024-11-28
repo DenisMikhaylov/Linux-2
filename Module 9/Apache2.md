@@ -124,5 +124,14 @@ named-checkconf -z
 ```
 rndc reload
 ```
-
+Проверить DHCP на DNS
+```
+nano /etc/dhcp/dhcpd.conf
+```
+```
+option domain-name-servers 192.168.10.1;
+```
 Протестируйте в браузере на Windows
+```
+http://www.corp.ru
+```
