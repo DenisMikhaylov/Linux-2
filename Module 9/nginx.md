@@ -71,8 +71,14 @@ ln -s /etc/nginx/sites-available/example_1.ru /etc/nginx/sites-enabled/
 ```
 nano /etc/nginx/nginx.conf
 ```
+Раскоментировать
 ```
 server_names_hash_bucket_size
+```
+Удалить файл
+```
+rm /etc/nginx/sites-enabled/default
+
 ```
 
 Проверяем настройки
@@ -90,6 +96,8 @@ systemctl restart nginx
 Переходим на gate
 ```
 nano /etc/bind/corp.ru
+или
+nano /etc/nginx/nginx.conf
 ```
 Добавляем строку и меняем серийный номер
 ```
