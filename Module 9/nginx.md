@@ -69,7 +69,7 @@ ln -s /etc/nginx/sites-available/example_1.ru /etc/nginx/sites-enabled/
 Редактируем файл NGINX
 
 ```
-nano /etc/nginx/nginx.con
+nano /etc/nginx/nginx.conf
 ```
 ```
 server_names_hash_bucket_size
