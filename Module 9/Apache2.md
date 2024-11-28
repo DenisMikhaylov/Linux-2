@@ -52,7 +52,7 @@ nano /var/www/html/index.html
 
 Копируем настройки
 ```
-cp /etc/apache2/sites-available/000-default.conf  www.conf
+cp /etc/apache2/sites-available/000-default.conf  /etc/apache2/sites-available/www.conf
 ```
 
 ```
