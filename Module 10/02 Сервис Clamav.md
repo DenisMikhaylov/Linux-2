@@ -25,7 +25,7 @@ MilterSocketGroup postfix
 gate:~# service clamav-daemon
 ```
 ```
-root@gate:~# cat /etc/postfix/main.cf
+root@gate:~# nano /etc/postfix/main.cf
 ```
 ```
 ...
